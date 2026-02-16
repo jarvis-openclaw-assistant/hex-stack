@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Hex Stack</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Hex Stack - A fast-paced hexagonal tile-matching puzzle game">
+  <meta name="theme-color" content="#0a0a1a">
+</head>
+<body>
+  <div id="gameContainer">
+    <!-- Main Menu -->
+    <div id="screen-menu" class="screen active">
+      <div class="menu-content">
+        <h1 class="title">⬡ Hex Stack</h1>
+        <p class="subtitle">Match. Clear. Stack.</p>
+        <div class="menu-buttons">
+          <button id="btnPlay" class="btn btn-primary">▶ Play</button>
+          <button id="btnLevelSelect" class="btn">🗺 Level Select</button>
+          <button id="btnSettings" class="btn">⚙ Settings</button>
+          <button id="btnHighScore" class="btn">🏆 High Score</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Level Select -->
+    <div id="screen-levelSelect" class="screen">
+      <div class="screen-content">
+        <h2>Select Level</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="btnLevelBack" class="btn btn-back">← Back</button>
+      </div>
+    </div>
+
+    <!-- Settings -->
+    <div id="screen-settings" class="screen">
+      <div class="screen-content">
+        <h2>Settings</h2>
+        <div class="settings-list">
+          <button id="btnSoundToggle" class="btn">Sound: ON 🔊</button>
+          <button id="btnResetProgress" class="btn btn-danger">🗑 Reset Progress</button>
+        </div>
+        <button id="btnSettingsBack" class="btn btn-back">← Back</button>
+      </div>
+    </div>
+
+    <!-- High Score -->
+    <div id="screen-highScore" class="screen">
+      <div class="screen-content">
+        <h2>🏆 High Score</h2>
+        <div class="score-display">
+          <div class="score-item">
+            <span class="score-label">Best Score</span>
+            <span id="displayHighScore" class="score-value">0</span>
+          </div>
+          <div class="score-item">
+            <span class="score-label">Highest Level</span>
+            <span id="displayHighestLevel" class="score-value">1</span>
+          </div>
+        </div>
+        <button id="btnScoreBack" class="btn btn-back">← Back</button>
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="screen-game" class="screen">
+      <!-- HUD -->
+      <div id="hud" class="hud" style="display:none">
+        <span id="hudLevel" class="hud-item">Level 1</span>
+        <span id="hudTarget" class="hud-item">Target: 300</span>
+        <span id="hudScore" class="hud-item hud-score">0</span>
+        <button id="btnPause" class="hud-btn">⏸</button>
+        <button id="btnSoundHUD" class="hud-btn">🔊</button>
+      </div>
+
+      <!-- Canvas -->
+      <canvas id="gameCanvas"></canvas>
+
+      <!-- Pause Overlay -->
+      <div id="pauseOverlay" class="overlay" style="display:none">
+        <div class="overlay-content">
+          <h2>⏸ Paused</h2>
+          <button id="btnResume" class="btn btn-primary">▶ Resume</button>
+          <button id="btnPauseMenu" class="btn">🏠 Main Menu</button>
+        </div>
+      </div>
+
+      <!-- Level Complete Overlay -->
+      <div id="levelCompleteOverlay" class="overlay" style="display:none">
+        <div class="overlay-content level-complete">
+          <h2>🎉 Level Complete!</h2>
+          <p>Level <span id="lcLevel">1</span></p>
+          <p class="big-score">Score: <span id="lcScore">0</span></p>
+          <button id="btnNextLevel" class="btn btn-primary">Next Level →</button>
+          <button id="btnLevelCompleteMenu" class="btn">🏠 Main Menu</button>
+        </div>
+      </div>
+
+      <!-- Game Over Overlay -->
+      <div id="gameOverOverlay" class="overlay" style="display:none">
+        <div class="overlay-content game-over">
+          <h2>💀 Game Over</h2>
+          <p>Level <span id="goLevel">1</span></p>
+          <p class="big-score">Score: <span id="goScore">0</span></p>
+          <p>High Score: <span id="goHighScore">0</span></p>
+          <button id="btnPlayAgain" class="btn btn-primary">🔄 Play Again</button>
+          <button id="btnGameOverMenu" class="btn">🏠 Main Menu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
