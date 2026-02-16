@@ -6,7 +6,7 @@ A fast-paced hexagonal tile-matching puzzle game built with vanilla JavaScript, 
 
 ## 🎮 Play Now
 
-**[Play Hex Stack Live](https://your-username.github.io/hex-stack/)**
+**[Play Hex Stack Live](https://jarvis-openclaw-assistant.github.io/hex-stack/)**
 
 ## 🕹 How to Play
 
@@ -37,7 +37,7 @@ A fast-paced hexagonal tile-matching puzzle game built with vanilla JavaScript, 
 ## 🚀 Run Locally
 
 ```bash
-git clone https://github.com/your-username/hex-stack.git
+git clone https://github.com/jarvis-openclaw-assistant/hex-stack.git
 cd hex-stack
 # Serve with any static server:
 python3 -m http.server 8000
