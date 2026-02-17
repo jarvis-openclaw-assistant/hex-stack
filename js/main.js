@@ -25,7 +25,10 @@ function gameLoop(timestamp) {
     gameDraw();
     updateHUD();
   } else if (state.screen === Screen.PAUSED) {
-    gameDraw(); // still draw, just don't update
+    gameDraw();
+  } else if (state.screen === Screen.LEVEL_COMPLETE || state.screen === Screen.GAME_OVER) {
+    gameDraw(); // draw final board state behind overlay
+    updateHUD(); // shows the overlay
   }
   
   requestAnimationFrame(gameLoop);
