@@ -19,6 +19,7 @@
           <button id="btnPlay" class="btn btn-primary">▶ Play</button>
           <button id="btnLevelSelect" class="btn">🗺 Level Select</button>
           <button id="btnSettings" class="btn">⚙ Settings</button>
+          <button id="btnHowToPlay" class="btn">❓ How to Play</button>
           <button id="btnHighScore" class="btn">🏆 High Score</button>
         </div>
       </div>
@@ -30,6 +31,51 @@
         <h2>Select Level</h2>
         <div id="levelGrid" class="level-grid"></div>
         <button id="btnLevelBack" class="btn btn-back">← Back</button>
+      </div>
+    </div>
+
+    <!-- How to Play -->
+    <div id="screen-howToPlay" class="screen">
+      <div class="screen-content how-to-play">
+        <h2>How to Play</h2>
+        <div class="instructions">
+          <div class="instruction-item">
+            <span class="instruction-icon">👆</span>
+            <div>
+              <strong>Tap groups of 3+</strong>
+              <p>Tap any cluster of 3 or more same-colored hexagons to clear them and score points.</p>
+            </div>
+          </div>
+          <div class="instruction-item">
+            <span class="instruction-icon">⬇️</span>
+            <div>
+              <strong>New rows push down</strong>
+              <p>New tiles appear at the top periodically. If the board fills to the bottom, it's game over!</p>
+            </div>
+          </div>
+          <div class="instruction-item">
+            <span class="instruction-icon">🔥</span>
+            <div>
+              <strong>Build combos</strong>
+              <p>Clear groups in quick succession for combo multipliers (up to 5×). The timer bar at the top shows when the next row arrives.</p>
+            </div>
+          </div>
+          <div class="instruction-item">
+            <span class="instruction-icon">🎯</span>
+            <div>
+              <strong>Hit the target score</strong>
+              <p>Each level has a target score shown in the HUD. Reach it to advance. Bigger groups = more points!</p>
+            </div>
+          </div>
+          <div class="instruction-item">
+            <span class="instruction-icon">💡</span>
+            <div>
+              <strong>Tips</strong>
+              <p>Clear from the bottom to create space. Look for large groups — a 6-tile clear scores 3× more than two 3-tile clears.</p>
+            </div>
+          </div>
+        </div>
+        <button id="btnHowToPlayBack" class="btn btn-back">← Back</button>
       </div>
     </div>
 
